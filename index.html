@@ -615,6 +615,22 @@
 #myBtn:hover {
   background-color: #555;
 }
+
+
+@media (max-width: 600px) {
+  .nav-logo {
+    font-size: 0.9rem;
+  }
+
+  .nav-logo::after {
+    content: "AA";   /* short branding */
+    font-family: var(--serif);
+  }
+
+  .nav-logo span {
+    display: none;
+  }
+}
 </style>
 </head>
 <body>
