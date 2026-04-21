@@ -486,7 +486,38 @@
   }
 }
 
+.hero-title {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
 
+.hero-title span {
+  opacity: 0;
+  transform: translateY(40px);
+  display: inline-block;
+  animation: wordReveal 0.6s ease forwards;
+}
+
+/* stagger effect */
+.hero-title span:nth-child(1) { animation-delay: 0.2s; }
+.hero-title span:nth-child(2) { animation-delay: 0.4s; }
+.hero-title span:nth-child(3) { animation-delay: 0.6s; }
+.hero-title span:nth-child(4) { animation-delay: 0.8s; }
+.hero-title span:nth-child(5) { animation-delay: 1s; }
+.hero-title span:nth-child(6) { animation-delay: 1.2s; }
+
+.hero-title .accent {
+  color: var(--accent);
+  font-style: italic;
+}
+
+@keyframes wordReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .hero-socials svg {
   width: 18px;
@@ -650,7 +681,15 @@
 <section class="hero" id="top">
   <div class="hero-left">
     <p class="hero-tag">CX Consultant &amp; Developer</p>
-    <h1>Turning Customer <em>Signals</em> into Smarter Experiences</h1>
+    <!-- <h1>Turning Customer <em>Signals</em> into Smarter Experiences</h1> -->
+    <h1 class="hero-title">
+      <span>Turning</span>
+      <span>Customer</span><br>
+      <span class="accent">Signals</span><br>
+      <span>into</span>
+      <span>Smarter Experiences</span>
+      
+    </h1>
     <p class="hero-sub">Analyst at Etech Global Services — specialised in Medallia, Voice of Customer, and digital analytics. Currently supporting <b><i>Ford Motor Company's</b></i> global CX program.</p>
     <div class="hero-cta">
       <a href="#experience" class="btn btn-primary">View Experience</a>
